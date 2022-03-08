@@ -273,7 +273,7 @@ getData() {
             KEY_FILE="/etc/v2ray/${DOMAIN}.key"
         else
             # resolve=`curl -sL https://hijk.art/hostip.php?d=${DOMAIN}`
-	    resolve=`ping ${DOMAIN} -c 1 | sed ‘1{s/[^(]*(//;s/).*//;q}’`
+	    resolve=`ping ${DOMAIN} -c 1 | sed '1{s/[^(]*(//;s/).*//;q}'`
             res=`echo -n ${resolve} | grep ${IP}`
             if [[ -z "${res}" ]]; then
                 colorEcho ${BLUE}  "${DOMAIN} 解析结果：${resolve}"
